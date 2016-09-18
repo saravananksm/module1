@@ -1,14 +1,16 @@
 (function () {
 	"use strict"
-	angular.module("MenuDetails",[])
-			
-			.controller("MenuDetailsController",function($scope){
+	angular.module("LunchCheck",[])			
+			.controller("LunchChecksController",LunchChecksController);
+
+				LunchChecksController.$inject=[$scope];				
+				function LunchChecksController($scope){
 				$scope.menuItems="";
 				$scope.msgMenuFeedBack="";
-				$scope.findMenuFeedBack=	function(){	
+				$scope.findMenuFeedBack =	function(){	
 				$scope.msgMenuFeedBack = prepareFeedBack($scope.menuItems);
-				};
-
+				}
+			}
 				function prepareFeedBack(menuItems){
 					var menuItemsArray = menuItems.split(',');
 					var noOfItemsOrdered = menuItemsArray.length;
@@ -23,7 +25,5 @@
 					return feedback;
 
 				}
-
-
-			});			
+				
 })();

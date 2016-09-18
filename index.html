@@ -5,9 +5,9 @@
 	<script type="text/javascript" src="angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 </head>
-<body ng-app="MenuDetails">
+<body ng-app="LunchCheck">
 	<h1>Please Order Your Menu</h1>
-	<div ng-controller="MenuDetailsController">
+	<div ng-controller="LunchChecksController">
 		<div><input type="text" ng-model="menuItems">
 		<button ng-click="findMenuFeedBack()">Check If Too Much</button></div>
 		<div>{{msgMenuFeedBack}}</div>
